@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import Card from "./Card";
-// import Api from "./API";
+import Api from "./API";
 
 const Mid = () => {
-  const [apiData, setApiData] = React.useState([]);
-  // console.log(apiData);
+  const [apiData, setApiData] = React.useState(Api);
 
-  useEffect(() => {
-    getApiList("research");
-  }, []);
+
+//   useEffect(() => {
+//     getApiList("research");
+//   }, []);
 
   const getApiList = (category) => {
     fetch(`http://localhost:8000/${category}`)
